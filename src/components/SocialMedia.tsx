@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styles from "./SocialMedia.module.css";
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa6";
+import { FaEnvelope, FaWhatsapp, FaInstagram } from "react-icons/fa6";
 
 const SocialMedia = () => {
   return (
@@ -39,6 +39,33 @@ const SocialMedia = () => {
           transition={{
             duration: 3,
             delay: 1.5,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001,
+            },
+          }}
+        >
+          <li>
+            <a
+              href="https://instagram.com/solution_levando_solucao"
+              className={styles.instagram_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+          </li>
+        </motion.ul>
+
+        <motion.ul
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 3,
+            delay: 1.8,
             ease: [0, 0.71, 0.2, 1.01],
             scale: {
               type: "spring",
