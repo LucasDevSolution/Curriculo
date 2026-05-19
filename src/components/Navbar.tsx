@@ -87,7 +87,7 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <NavLink to={"/"} className={styles.logo}>
-        &lt; <span className={styles.logo_span}>Lucas Torres</span>/&gt;
+        &lt; <span className={styles.logo_span}>Currículo L.M</span>/&gt;
       </NavLink>
 
       <nav>
