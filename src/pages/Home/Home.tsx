@@ -6,15 +6,23 @@ import ParticlesBackground from "../../components/ParticlesBackground";
 
 const Home = () => {
   return (
-    <main className={styles.home}>
-      <div className={styles.particles_container}>
-        <ParticlesBackground />
-      </div>
-
+    <main>
       <Transition onAnimationComplete={() => {}}>
-        <article className={styles.home_card}>
-          <div className={styles.card_header}>
-            <div className={styles.card_text}>
+        <section className={styles.home}>
+          <div className={styles.particles_container}>
+            <ParticlesBackground />
+          </div>
+          <header className={styles.home_content}>
+            <div className={styles.home_img}>
+              <motion.img
+                src="/imgs/Eu.png"
+                alt="Foto de Lucas Martins"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.7, ease: [0.2, 0, 0.2, 1] }}
+              />
+            </div>
+            <div className={styles.resume_header}>
               <h1>Lucas Martins de Barros Torres</h1>
               <p className={styles.resume_subtitle}>Técnico em Refrigeração e Climatização</p>
               <div className={styles.resume_info_line}>
@@ -30,32 +38,21 @@ const Home = () => {
               </p>
             </div>
 
-            <motion.div
-              className={styles.card_photo}
-              initial={{ opacity: 0, scale: 0.75 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.9, delay: 0.5, ease: [0.2, 0, 0.2, 1] }}
-            >
-              <img src="/imgs/Eu.png" alt="Foto de Lucas Martins" />
-            </motion.div>
-          </div>
-
-          <div className={styles.card_body}>
-            <section className={styles.resume_section}>
+            <div className={styles.resume_section}>
               <h2>Objetivo Profissional</h2>
               <p>
                 Atuar na área de refrigeração e climatização, oferecendo serviços com qualidade, responsabilidade e eficiência, buscando crescimento profissional e contribuindo com a empresa através de experiência técnica, organização e bom atendimento ao cliente.
               </p>
-            </section>
+            </div>
 
-            <section className={styles.resume_section}>
+            <div className={styles.resume_section}>
               <h2>Resumo Profissional</h2>
               <p>
                 Experiência em manutenção, instalação e limpeza de equipamentos de refrigeração e ar-condicionado residencial, comercial e industrial. Conhecimento em diagnóstico de defeitos, troca de peças, carga de gás, manutenção preventiva e corretiva, além de atendimento ao cliente e organização de ferramentas e materiais.
               </p>
-            </section>
+            </div>
 
-            <section className={styles.resume_skills}>
+            <div className={styles.resume_skills}>
               <h2>Habilidades</h2>
               <ul>
                 <li>Instalação de ar-condicionado split, inverter e convencional</li>
@@ -67,18 +64,17 @@ const Home = () => {
                 <li>Organização de ferramentas e materiais</li>
                 <li>Disponibilidade para viagens e início imediato</li>
               </ul>
-            </section>
-          </div>
+            </div>
 
-          <div className={styles.card_footer}>
             <div className={styles.btn_box}>
               <a href="/about" className={styles.btn}>
                 Ver Currículo Completo
               </a>
             </div>
+
             <SocialMedia />
-          </div>
-        </article>
+          </header>
+        </section>
       </Transition>
     </main>
   );
