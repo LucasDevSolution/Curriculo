@@ -86,23 +86,7 @@ const Portfolio = () => {
                       </ul>
                     </section>
 
-                    <section className={styles.links}>
-                      <a
-                        href={item.linkDeploy || "/contact"}
-                        className={styles.link}
-                      >
-                        Orçamento
-                        <FaExternalLinkAlt className={styles.icon} />
-                      </a>
-
-                      <a
-                        href={item.linkRepository || "/contact"}
-                        className={styles.link}
-                      >
-                        Contato
-                        <FaPhone className={styles.icon} />
-                      </a>
-                    </section>
+                    
                   </header>
                 </article>
               </SwiperSlide>
