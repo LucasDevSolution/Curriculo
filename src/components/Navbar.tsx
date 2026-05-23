@@ -136,7 +136,7 @@ const Navbar = () => {
             style={{ ["--i" as string]: 2 }}
           >
             <NavLink
-              to="/portfolio"
+              to="/atuacao"
               className={({ isActive }) => (isActive ? styles.active : "")}
             >
               Atuação
